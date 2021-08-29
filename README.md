@@ -18,7 +18,7 @@ Please note that the software development is not completed currently (and will p
 I used PlatformIO instead of Arduino IDE, but the last one should work as well after manual import of the libraries.<br><br>
 Used libraries:<br>
 
-PlatformIO should load the next three libraries automatically. Using Arduino IDE instead might need manually loading these libraries:
+PlatformIO should load the following three libraries automatically. Using Arduino IDE instead might need manually loading these libraries:
 https://github.com/PaulStoffregen/XPT2046_Touchscreen<br>
 https://github.com/bblanchon/ArduinoJson<br>
 https://github.com/plapointe6/EspMQTTClient<br>
