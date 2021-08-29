@@ -47,7 +47,8 @@ https://www.youtube.com/watch?v=2vLFegkDQvQ
 Set the baud rate of the CAT interface at the TRX to 38400, or use another value to be configured in main.cpp. Pins on the ESP32 for the serial connection are 16 (RX) and 17 (TX)<br>
 
 Do to the polling of the current settings as described before, touching the soft keys cannot not lead to immediate reactions if the application is just busy to process a request to the TRX and to wait for the reply. Thus it is needed to press the key longer until the key shortly is highlighted.<br>
-The lock symbol on the left side of the frequency digits is green if the dial is unlocked and red if locked. Long press on the symbol toogles the setting as well.
+The lock symbol on the left side of the frequency digits is green if the dial is unlocked and red if locked. Long press on the symbol toogles the setting as well.<br>
+A new frequency can be set already on the TFT display. Long press to the left, middle or right part of the frequency changes the selected digits to red. Now the wheel on the TRX is used to change the frequency shown on the TFT display. Don't care about the frequency shown on the TRX. When pressing "OK" the new frequency will be set to the TRX. Fast turning the wheel increases the frequency changes.
 
 
 <br><br>
