@@ -34,11 +34,6 @@ Wifi and MQTT is disabled by default. It can be activtated in globals.h. Look fo
 (4) I found that using the 2m antenna stick directly on the phone leads to reboots on 2m band when transmitting. This is not a software issue, but one has to take care to e.g block hf on the connections between TRX and ESP32.<br>
 (5) I did not really test the S-meter presentation. May be it's not following the real signal values quickly enough. In any case the shown values are not precise. I used an example out of the original TFT_eSPI library and changed it to present the S-meter scale - should be replaced with a better one.<br><br>
 
-<b>Operation</b><br>
-Do to the polling of the settings as described before, touching the soft keys cannot not lead to immediate reactions if the application is just busy to process a request to the TRX and to wait for the reply. So it is needed to press the keys longer until the keys shortly are highlighted.
-
-<br><br>
-
 <b>Pin assignment</b><br>
 ![Screenshot](pins.png)
 <br><br>
@@ -48,5 +43,13 @@ I created a 3D case for the ESP32 and the display, available on thingiverse: htt
 <b>Demonstration on Youtube</b><br>
 https://www.youtube.com/watch?v=2vLFegkDQvQ
 
+<b>Operation</b><br>
+Set the baud rate of the CAT interface at the TRX to 38400, or use another value to be configured in main.cpp. Pins on the ESP32 for the serial connection are 16 (RX) and 17 (TX)<br>
+
+Do to the polling of the current settings as described before, touching the soft keys cannot not lead to immediate reactions if the application is just busy to process a request to the TRX and to wait for the reply. Thus it is needed to press the key longer until the key shortly is highlighted.<br>
+The lock symbol on the left side of the frequency digits is green if the dial is unlocked and red if locked. Long press on the symbol toogles the setting as well.
+
+
+<br><br>
 
 
