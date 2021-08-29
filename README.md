@@ -32,7 +32,8 @@ Wifi and MQTT is disabled by default. It can be activtated in globals.h. Look fo
 (2) If the application does not get a Wifi connection or cannot connect to a MQTT broker, the application reboots (if MQTT is enabled in globals.h)<br>
 (3) Some presented values in the area of the frequency digits are not completely deleted or not completely shown. Here the deleetion of old values needs optimization<br>
 (4) I found that using the 2m antenna stick directly on the phone leads to reboots on 2m band when transmitting. This is not a software issue, but one has to take care to e.g block hf on the connections between TRX and ESP32.<br>
-(5) I did not really test the S-meter presentation. May be it's not following the real signal values quickly enough. In any case the shown values are not precise. I used an example out of the original TFT_eSPI library and changed it to present the S-meter scale - should be replaced with a better one.<br><br>
+(5) I did not really test the S-meter presentation. May be it's not following the real signal values quickly enough. In any case the shown values are not precise. I used an example out of the original TFT_eSPI library and changed it to present the S-meter scale - should be replaced with a better one.<br>
+(6) No built-in calibration function of the TFT display and the touch controller<br>
 
 <b>Pin assignment</b><br>
 ![Screenshot](pins.png)
