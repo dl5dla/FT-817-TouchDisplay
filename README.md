@@ -1,7 +1,7 @@
 # FT-817-Touch Display
 ![Screenshot](display.png)
 
-'D1 mini ESP32 controller together with a 3.2 TFT display ILI9341 to control a Yaesu FT-818 or (with some small changes) the FT-817. The code is far away from being optimized. Nevertheless I made it public to give others the chance to use or improve the code.
+Application for the 'D1 mini ESP32 controller' connected to a 3.2 inch TFT display ILI9341 to control a Yaesu FT-818 or (with some small changes) the FT-817. The code is far away from being optimized. Nevertheless I made it public to give others the chance to use or improve the code.
 
 The CAT control part of the software is based on the excellent FT-817 library from Pavel Milanes (https://github.com/stdevPavelmc/ft817), which I did extend to add new functions.
 Thanks to Clint Turner (KA7OEI) for his huge information about controlling the FT-817 via CAT commands (http://www.ka7oei.com/ft817_meow.html)
@@ -46,7 +46,7 @@ I created a 3D case for the ESP32 and the display, available on thingiverse: htt
 https://www.youtube.com/watch?v=2vLFegkDQvQ
 
 <b>Operation</b><br>
-As mentioned there is currently no calibration function present. As workaround one can enable the call to the calibration in main.cpp (setup). When the application starts, a black screen with an rectangle is shown. Enable the monitor to watch the serial print's and press the upper left corner of the rectangle. The printed values represent the touch coordinates corresponding to the x,y TFT coordinates configured in calibrate.cpp, line 16 (tft.drawCircle(10,10,5,TFT_RED), x=10,y=10). When long presing the same point on the display an average will be calculated. Change the coordinates in line 16 to 300/220, compile and repeat the step before. Enter the average values in globals.h (TS_MINX, TS_MINY, TS_MAXX, TS_MAXY). When done comment the call to the calibration out again (in main.cpp, setup). Should be easy to make it more comfortable.<br>
+As mentioned there is currently no real calibration function present. As workaround one can enable the call to the calibration in main.cpp (setup). When the application starts, a black screen with an rectangle is shown. Enable the monitor to watch the serial print's and press the upper left corner of the rectangle. The printed values represent the touch coordinates corresponding to the x,y TFT coordinates configured in calibrate.cpp, line 16 (tft.drawCircle(10,10,5,TFT_RED), x=10,y=10). When long presing the same point on the display an average will be calculated. Change the coordinates in line 16 to 300/220, compile and repeat the step before. Enter the average values in globals.h (TS_MINX, TS_MINY, TS_MAXX, TS_MAXY). When done comment the call to the calibration out again (in main.cpp, setup). Should be easy to make it more comfortable.<br>
 
 Set the baud rate of the CAT interface at the TRX to 38400, or use another value to be configured in main.cpp. Pins on the ESP32 for the serial connection are 16 (RX) and 17 (TX)<br>
 
