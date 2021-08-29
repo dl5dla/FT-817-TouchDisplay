@@ -1,4 +1,4 @@
-# FT-817-TouchDisplay
+# FT-817-Touch Display
 
 'D1 mini ESP32 controller together with a 3.2 TFT display ILI9341 to control a Yaesu FT-818 or (with some small changes) the FT-817. The code is far away from optimized. Nevertheless I make it public to give others the chance to use or improve the code.
 
