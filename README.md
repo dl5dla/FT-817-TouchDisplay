@@ -3,7 +3,7 @@
 
 Application for the 'D1 mini ESP32 controller' connected to a 3.2 inch TFT display ILI9341 to control a Yaesu FT-818 or (with some small changes) the FT-817. The code is far away from being optimized. Nevertheless I made it public to give others the chance to use or improve the code.
 
-The CAT control part of the software is based on the excellent FT-817 library from Pavel Milanes (https://github.com/stdevPavelmc/ft817), which I did extend to add new functions.
+The CAT control part of the software is based on the excellent FT-817 library from Pavel Milanes (https://github.com/stdevPavelmc/ft817), which I extended to add new functions.
 Thanks to Clint Turner (KA7OEI) for his huge information about controlling the FT-817 via CAT commands (http://www.ka7oei.com/ft817_meow.html)
 
 Some background information for controlling the FT-817/FT-818:
@@ -16,6 +16,17 @@ Please note that the software development is not completed currently (and will p
 
 <b>Compile the software for the FT-818</b><br>
 I used PlatformIO instead of Arduino IDE, but the last one should work as well after manual import of the libraries.<br><br>
+Used libraries:<br>
+
+PlatformIO should load the next three libraries automatically. Using Arduino IDE instead might need manually loading these libraries:
+https://github.com/PaulStoffregen/XPT2046_Touchscreen<br>
+https://github.com/bblanchon/ArduinoJson<br>
+https://github.com/plapointe6/EspMQTTClient<br>
+<br>
+Included in lib folder are modified libraries based on<br>
+https://github.com/stdevPavelmc/ft817<br>
+https://github.com/Bodmer/TFT_eSPI<br>
+<br>
 (1) Download the code from github as a zip file<br>
 (2) Put it into the PlatformIO project folder and extract the files<br>
 (3) Open it in PlatformIO ("Open Project")<br>
