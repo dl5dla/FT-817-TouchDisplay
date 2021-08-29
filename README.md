@@ -45,6 +45,8 @@ I created a 3D case for the ESP32 and the display, available on thingiverse: htt
 https://www.youtube.com/watch?v=2vLFegkDQvQ
 
 <b>Operation</b><br>
+As mentioned there is currently no calibration function present. As workaround one can enable the call to the calibration in main.cpp (setup). When the application starts, a black screen with an rectangle is shown. Enable the monitor to watch the serial print's and press the upper left corner of the rectangle. The printed values represent the touch coordinates corresponding to the x,y TFT coordinates configured in calibrate.cpp, line 16 (tft.drawCircle(10,10,5,TFT_RED), x=10,y=10). When long presing the same point on the display an average will be calculated. Change the coordinates in line 16 to 300/220, compile and repeat the step before. Enter the average values in globals.h (TS_MINX, TS_MINY, TS_MAXX, TS_MAXY). When done comment the call to the calibration out again (in main.cpp, setup). Should be easy to make it more comfortable.<br>
+
 Set the baud rate of the CAT interface at the TRX to 38400, or use another value to be configured in main.cpp. Pins on the ESP32 for the serial connection are 16 (RX) and 17 (TX)<br>
 
 Do to the polling of the current settings as described before, touching the soft keys cannot not lead to immediate reactions if the application is just busy to process a request to the TRX and to wait for the reply. Thus it is needed to press the key longer until the key shortly is highlighted.<br>
