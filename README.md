@@ -13,8 +13,16 @@ Changes of settings across the CAT interface are done in most cases by writing t
 
 Please note that the software development is not completed currently (and will probably never be), because of lack of time. Thus, take it as is and improve it as you like. The next step which I would have to take is to redesign and optimize the code - it's currently not "beautiful" ;-)
 
-<b>Compile the software:</b><br>
+<b>Compile the software for the FT-818:</b><br>
 I used PlatformIO instead of Arduino IDE, but the last one should work as well after manual import of the libraries.<br><br>
+(1) Download the code from github as a zip file
+(2) Put it into the PlatformIO project folder and extract the files
+(3) Open it in PlatformIO ("Open Project")
+(4) "Build" or "Upload"
+
+Please note: Do NOT install the initial software, if you would like to connect the ESP32 via CAT interface to the FT-81<b>7</b>. I do not have a FT-817 and did not test it. The memory layout of the FT-817 is not completely the same as of the FT-818, meaning that it could lead to trouble!<br><br>
+Adapt the software to support the FT-817 instead of the FT-818 (UNTESTED!)<br>
+Open the file globals.h in the src folder and search for "#define FT818". Comment this line out (deactivate it). This will change the calculation of the base address (s. ft817.cpp, around line 930). But as I said - do it only on your risk!<br>
 
 
 
