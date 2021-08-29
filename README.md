@@ -11,7 +11,7 @@ The FT-817/818 is not notifying a connected controller in case a user changes it
 <b>Warning</b><br>
 Changes of settings across the CAT interface are done in most cases by writing to the EEPROM of the FT-817/818. As described by Clint Turner (s. link above), this could harm the transceiver, can delete the factory settings and can lead to a defect device. But even if the write commands are sent in the right format, accidently writing to the EEPROM frequently (e.g. in a loop) can destroy the EEPROM after a certain (big) number of cycles. The minimum action you should take is to backup the "soft calibration" settings BEFORE you apply this software! Please read the details on Clint's web page! In the provided software EEprom write is disabled, but can be enabled in ft817.h (comment out "#define NO_EEPROM_WRITE").
 
-Please note that the software development is not completed currently (and will probbably never be), because of lack of time. Thus, take it as is and improve it as you like. The next step which I would have to take is to redesign and optimize the code - it's currently not "beautiful" ;-)
+Please note that the software development is not completed currently (and will probably never be), because of lack of time. Thus, take it as is and improve it as you like. The next step which I would have to take is to redesign and optimize the code - it's currently not "beautiful" ;-)
 
 Pin assignment:
 
