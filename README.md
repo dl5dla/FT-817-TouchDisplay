@@ -13,11 +13,21 @@ Changes of settings across the CAT interface are done in most cases by writing t
 
 Please note that the software development is not completed currently (and will probably never be), because of lack of time. Thus, take it as is and improve it as you like. The next step which I would have to take is to redesign and optimize the code - it's currently not "beautiful" ;-)
 
+<b>Compile the software:</b><br>
+I used PlatformIO instead of Arduino IDE, but the last one should work as well after manual import of the libraries.<br><br>
+
+
+
+<br><br>
+
 <b>Pin assignment:</b><br>
 ![Screenshot](pins.png)
-<br>
+<br><br>
 <b>Enclosure:</b><br>
-I created a 3D case for the ESP32 and the display, available on thingiverse: https://www.thingiverse.com/thing:4938484<br><br>
+I created a 3D case for the ESP32 and the display, available on thingiverse: https://www.thingiverse.com/thing:4938484
+<br><br>
+<b>Demonstration on Youtube</b><br>
+https://www.youtube.com/watch?v=2vLFegkDQvQ
 
 
 
