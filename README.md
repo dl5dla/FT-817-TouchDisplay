@@ -13,7 +13,11 @@ Changes of settings across the CAT interface are done in most cases by writing t
 
 Please note that the software development is not completed currently (and will probably never be), because of lack of time. Thus, take it as is and improve it as you like. The next step which I would have to take is to redesign and optimize the code - it's currently not "beautiful" ;-)
 
-Pin assignment:<br>
+<b>Pin assignment:</b><br>
 ![Screenshot](pins.png)
+<br>
+<b>Enclosure:</b><br>
+I created a 3D case for the ESP32 and the display, available on thingiverse: https://www.thingiverse.com/thing:4938484<br><br>
+
 
 
