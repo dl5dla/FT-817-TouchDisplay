@@ -13,12 +13,12 @@ Changes of settings across the CAT interface are done in most cases by writing t
 
 Please note that the software development is not completed currently (and will probably never be), because of lack of time. Thus, take it as is and improve it as you like. The next step which I would have to take is to redesign and optimize the code - it's currently not "beautiful" ;-)
 
-<b>Compile the software for the FT-818:</b><br>
+<b>Compile the software for the FT-818</b><br>
 I used PlatformIO instead of Arduino IDE, but the last one should work as well after manual import of the libraries.<br><br>
-(1) Download the code from github as a zip file
-(2) Put it into the PlatformIO project folder and extract the files
-(3) Open it in PlatformIO ("Open Project")
-(4) "Build" or "Upload"
+(1) Download the code from github as a zip file<br>
+(2) Put it into the PlatformIO project folder and extract the files<br>
+(3) Open it in PlatformIO ("Open Project")<br>
+(4) "Build" or "Upload"<br>
 
 Please note: Do NOT install the initial software, if you would like to connect the ESP32 via CAT interface to the FT-81<b>7</b>. I do not have a FT-817 and did not test it. The memory layout of the FT-817 is not completely the same as of the FT-818, meaning that it could lead to trouble!<br><br>
 <b>Adapt the software to support the FT-817 instead of the FT-818 (UNTESTED!)</b><br>
@@ -30,9 +30,14 @@ Wifi and MQTT is disabled by default. It can be activtated in globals.h. Look fo
 <b>Limitations</b><br>
 (1) The sofware does not check, whether the TRX is connected<br>
 (2) If the application does not get a Wifi connection or cannot connect to a MQTT broker, the application reboots (if MQTT is enabled in globals.h)<br>
-(3) Some presented values in the area of the frequency digits are not completely deleted or not completely shown. Here the deleetion of old values needs optimization
-(4) I found that using the 2m antenna stick directly on the phone leads to reboots on 2m band when transmitting. This is not a software issue, but one has to take care to e.g block hf on the connections between TRX and ESP32.
-(5) I did not really test the S meter presentation. May be it's not following the real signal values quickly enough. In any case the shown values are not precise. I use
+(3) Some presented values in the area of the frequency digits are not completely deleted or not completely shown. Here the deleetion of old values needs optimization<br>
+(4) I found that using the 2m antenna stick directly on the phone leads to reboots on 2m band when transmitting. This is not a software issue, but one has to take care to e.g block hf on the connections between TRX and ESP32.<br>
+(5) I did not really test the S-meter presentation. May be it's not following the real signal values quickly enough. In any case the shown values are not precise. I used an example out of the original TFT_eSPI library and changed it to present the S-meter scale - should be replaced with a better one.<br><br>
+
+<b>Operation</b><br>
+Do to the polling of the settings as described before, touching the soft keys cannot not lead to immediate reactions if the application is just busy to process a request to the TRX and to wait for the reply. So it is needed to press the keys longer until the keys shortly are highlighted.
+
+<br><br>
 
 <b>Pin assignment</b><br>
 ![Screenshot](pins.png)
