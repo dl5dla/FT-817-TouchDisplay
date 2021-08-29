@@ -287,7 +287,7 @@ getBandVFO(VFO)
 
 #define HAVE_ESP
 #define NO_EEPROM_WRITE		// read warnings in the readme file! Do not comment out if
-							// you don not know the risks!!!
+							// you do not know the risks!!! Save the soft calibraton settings beforehand!
 
 #ifndef HAVE_ESP
 	#include <SoftwareSerial.h>

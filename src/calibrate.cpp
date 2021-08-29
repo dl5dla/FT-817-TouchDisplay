@@ -28,8 +28,8 @@ void calibrate_touch()
           x1=x1+p.x;
           y1=y1+p.y;
 
-          //Serial.print("x=  ");Serial.print(p.x);Serial.print(", x_avg=  ");Serial.print(x1/count);
-          //Serial.print(", y=  ");Serial.print(p.y);Serial.print(", y_avg=  ");Serial.println(y1/count);
+          Serial.print("x=  ");Serial.print(p.x);Serial.print(", x_avg=  ");Serial.print(x1/count);
+          Serial.print(", y=  ");Serial.print(p.y);Serial.print(", y_avg=  ");Serial.println(y1/count);
           break;
         }
     }
