@@ -21,14 +21,20 @@ I used PlatformIO instead of Arduino IDE, but the last one should work as well a
 (4) "Build" or "Upload"
 
 Please note: Do NOT install the initial software, if you would like to connect the ESP32 via CAT interface to the FT-81<b>7</b>. I do not have a FT-817 and did not test it. The memory layout of the FT-817 is not completely the same as of the FT-818, meaning that it could lead to trouble!<br><br>
-Adapt the software to support the FT-817 instead of the FT-818 (UNTESTED!)<br>
+<b>Adapt the software to support the FT-817 instead of the FT-818 (UNTESTED!)</b><br>
 Open the file globals.h in the src folder and search for "#define FT818". Comment this line out (deactivate it). This will change the calculation of the base address (s. ft817.cpp, around line 930). But as I said - do it only on your risk!<br>
-
-
-
+There might be other differences, e.g. reagrding the result codes of the command "Read Transmitter Status". I you recognize that during TX the bars PWR, SWR, MOD and ALC are reversed, check main.cpp, line 130, where "show_bar()" is called.<br><br>
+<b>Enable MQTT:</b><br>
+Wifi and MQTT is disabled by default. It can be activtated in globals.h. Look for #define MQTT and activate this line. In this case you also have to add your Wifi secrets and the mqtt broker details in mqtt.cpp.
 <br><br>
+<b>Limitations</b><br>
+(1) The sofware does not check, whether the TRX is connected<br>
+(2) If the application does not get a Wifi connection or cannot connect to a MQTT broker, the application reboots (if MQTT is enabled in globals.h)<br>
+(3) Some presented values in the area of the frequency digits are not completely deleted or not completely shown. Here the deleetion of old values needs optimization
+(4) I found that using the 2m antenna stick directly on the phone leads to reboots on 2m band when transmitting. This is not a software issue, but one has to take care to e.g block hf on the connections between TRX and ESP32.
+(5) I did not really test the S meter presentation. May be it's not following the real signal values quickly enough. In any case the shown values are not precise. I use
 
-<b>Pin assignment:</b><br>
+<b>Pin assignment</b><br>
 ![Screenshot](pins.png)
 <br><br>
 <b>Enclosure:</b><br>
