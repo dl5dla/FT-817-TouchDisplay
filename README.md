@@ -47,7 +47,8 @@ Wifi and MQTT are disabled by default. It can be activtated in globals.h. Look f
 
 <b>Pin assignment</b><br>
 ![Screenshot](pins.png)<br>
-
+![Screenshot](cabeling1.jpg)
+![Screenshot](cabeling2.jpg)
 <br><br>
 <b>Enclosures</b><br>
 I created a 3D case for the ESP32 and the display, available on thingiverse: https://www.thingiverse.com/thing:4938484
