@@ -46,7 +46,7 @@ Wifi and MQTT are disabled by default. It can be activtated in globals.h. Look f
 (6) No built-in calibration function of the TFT display and the touch controller<br>
 
 <b>Pin assignment</b><br>
-![Screenshot](pins.png)
+![Screenshot](pins.png)<br>
 ![Screenshot](cabeling1.jpg)
 ![Screenshot](cabeling2.jpg)
 <br><br>
